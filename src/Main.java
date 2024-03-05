@@ -19,6 +19,12 @@ public class Main {
             // Turno del heroe
             int probH = random.nextInt(100);
 
+            if (probH < probabilidadHeroe) {
+                System.out.println("El heroe ataca al vampiro y causa " + ataqueHeroe + " puntos de daño.");
+                vidaVampiro -= ataqueHeroe;
+            } else {
+                System.out.println("El heroe intenta atacar al vampiro pero falla.");
+            }
 
             if (vidaVampiro <= 0) {
                 System.out.println("El heroe ha derrotado al vampiro. ¡Victoria del heroe!");
@@ -28,6 +34,12 @@ public class Main {
             // Turno del vampiro
             int probV = random.nextInt(100);
 
+            if (probV < probabilidadVampiro) {
+                System.out.println("El vampiro ataca al heroe y causa " + ataqueVampiro + " puntos de daño.");
+                vidaHeroe -= ataqueVampiro;
+            } else {
+                System.out.println("El vampiro intenta morder al heroe pero falla.");
+            }
 
             if (vidaHeroe <= 0) {
                 System.out.println("El vampiro ha derrotado al heroe. ¡Victoria del vampiro!");
