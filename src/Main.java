@@ -12,49 +12,8 @@ public class Main {
         int probabilidadHeroe = 50;
         int probabilidadVampiro = 50;
 
-
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
-
-        while (vidaHeroe > 0 && vidaVampiro > 0) {
-
-            if (random.nextInt() < probabilidadHeroe) {
-                System.out.println("El heroe ataca al vampiro y causa " + ataqueHeroe + " puntos de daño.");
-                vidaVampiro -= ataqueHeroe;
-            } else {
-                System.out.println("El heroe intenta atacar al vampiro pero falla.");
-            }
-
-
-            if (vidaVampiro <= 0) {
-                System.out.println("El heroe ha derrotado al vampiro. ¡Victoria del heroe!");
-                break;
-            }
-
-            if (random.nextInt() < probabilidadVampiro) {
-                System.out.println("El vampiro ataca al heroe y causa " + ataqueVampiro + " puntos de daño.");
-                vidaHeroe -= ataqueVampiro;
-            } else {
-                System.out.println("El vampiro intenta morder al heroe pero falla.");
-            }
-
-
-            if (vidaHeroe <= 0) {
-                System.out.println("El vampiro ha derrotado al heroe. ¡Victoria del vampiro!");
-                break;
-            }
-
-
-            System.out.println("Estado actual de la batalla:");
-            System.out.println("Heroe HP: " + vidaHeroe);
-            System.out.println("Vampiro HP: " + vidaVampiro);
-            System.out.println();
-
-            System.out.print("Presiona Enter para continuar...");
-            scanner.nextLine();
-        }
-
-        scanner.close();
     }
 }
